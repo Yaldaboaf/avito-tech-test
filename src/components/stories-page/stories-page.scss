@@ -1,0 +1,33 @@
+.stories-controls {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    // padding-bottom: 2.5%;
+
+}
+
+.stories-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stories-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    min-height: 43.6em;
+    margin: 0 10%;
+    background-color: #E6E6E3;
+}
+
+.reload-button-container{
+    margin: 0;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,40 @@
+.story-item-container {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 90%;
+    border-bottom: 1px solid grey;
+}
+.header-story-info{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    .vote-arrow{
+        width: 10px;
+        height: 10px;
+        background-image: "../assets/triangle.svg";
+    }
+    .score-container {
+        justify-content: left;
+        margin-left: 5px;
+    }
+}
+
+
+.story-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+}
+
+.footer-story-info {
+    display: flex;
+    margin: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.time-container {
+}
+
