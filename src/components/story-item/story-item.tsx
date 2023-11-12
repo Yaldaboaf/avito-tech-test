@@ -67,7 +67,7 @@ export const StoryItem: FC<StoryItemProps> = observer(({id}) => {
 
     
 
-    const date = convertTime(storyData?.time);
+    // const date = convertTime(storyData?.time);
 
     return (
         <div className="story-item-container">
@@ -79,7 +79,7 @@ export const StoryItem: FC<StoryItemProps> = observer(({id}) => {
             </div>
             <div className="footer-story-info">
                 <div className="author-name-container">by: {storyData?.by ? storyData.by : <></>}</div>
-                <div className="time-container">{date ? date : <></>}</div>
+                {/* <div className="time-container">{date?.getDate()}</div> */}
             </div>
         </div>
     )

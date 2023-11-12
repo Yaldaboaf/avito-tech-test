@@ -54,7 +54,7 @@ export const Comment:FC<CommentProps> = ({id}) => {
                         commentData?.kids ? <ShowHideButton kidsIds = {commentData.kids} /> : <></>
                     }
                 </div>
-                <div className="date-container">{date ? date : <></>}</div>
+                <div className="date-container">{date?.getDate()}</div>
             </div>
         </div>
     )

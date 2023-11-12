@@ -1,5 +1,4 @@
-import { makeAutoObservable, runInAction } from "mobx";
-import { getCommentsQuantityById } from "../api/getCommentsQuantityById";
+import { makeAutoObservable, runInAction, toJS } from "mobx";
 import { getDataById } from "../api/getDataById";
 
 
@@ -28,41 +27,24 @@ export class StoryStore {
     storyData = {} as Story;
 
     loadingFlag : boolean = false;
-    
-    commentsQuantity: number = 0;
 
     constructor() {
         makeAutoObservable(this);
     }
 
     getStoryDataByIdAction = async (id: string | undefined) => {
-        if (!id) {
-            return;
-        } else {
+        if (id){
             try {
                 this.loadingFlag = true;
                 const data = await getDataById(id);
                 runInAction(() => {
                     this.loadingFlag = false;
                     this.storyData = data;
-                    return data;
                 })
+                return data;
             } catch (err) {
                 console.log(err)
             }
         }
-    }
-
-    getCommentsQuantityByIdAction = async (story: Story) => {
-        try{ 
-            const overallQuantity = await getCommentsQuantityById(story);
-            this.setCommentQuantity(overallQuantity)
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-    setCommentQuantity = (quantity : number) => {
-            this.commentsQuantity = quantity;
     }
 }

@@ -7,11 +7,30 @@
     padding: 1.5% 2.5%;
     margin: 0 10%;
     .story-content {
+        .story-content-header{
+                display: flex;  
+                width: 100%;
+                flex-direction: column;
+                align-items: right;
+            
+        }
         .story-content-footer{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .date-container {
+            .score-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin-right: 5px;
+            }
+            .vote-arrow {
+                    width: 12px;
+                    height: 12px;
+                }
+            .grey-small {
+                margin-right: 5px;
                 color: #808080;
                 font-size: smaller;
             }
